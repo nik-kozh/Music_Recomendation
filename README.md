@@ -25,16 +25,19 @@
 ### 1. Анализ музыки и извлечение признаков
 
 1.  **Предобработка аудио:** Каждый аудиофайл преобразуется в **мел-спектрограмму** — изображение, которое визуализирует звуковой спектр трека.
-<img width="1221" height="592" alt="image" src="https://github.com/user-attachments/assets/1df519f1-70a5-4b18-93a6-c5731d1a80e1" />
+<img width="1205" height="611" alt="image" src="https://github.com/user-attachments/assets/3c116ac4-7be7-4d2d-a4a0-325005aa7229" />
 
 2.  **Классификация жанров:** Была обучена **сверточная нейронная сеть (CNN)** на датасете **FMA (Free Music Archive)** для классификации музыки по 8 жанрам (Hip-Hop, Pop, Folk, Rock и т.д.). Точность модели на тестовых данных составила **~68%**.
-<img width="1004" height="650" alt="image" src="https://github.com/user-attachments/assets/95c23f31-1e26-47ec-bdd2-c5b38d49c80e" />
-<img width="1004" height="449" alt="image" src="https://github.com/user-attachments/assets/37cf587e-56d5-4eaa-b2a9-4abd223de6bd" />
-<img width="994" height="994" alt="image" src="https://github.com/user-attachments/assets/e1035abd-9b6b-4871-8ac5-0eccfa29f4bc" />
+<img width="796" height="507" alt="image" src="https://github.com/user-attachments/assets/23928a07-f09e-4d44-bcca-4fe460bebe1e" />
+
+<img width="1004" height="449" alt="image" src="https://github.com/user-attachments/assets/bfac7b61-222a-4ee2-b907-f0243c0f692b" />
+
+<img width="994" height="994" alt="image" src="https://github.com/user-attachments/assets/627a06ac-3714-435f-b8b3-50ce5b57d777" />
+
+<img width="941" height="649" alt="image" src="https://github.com/user-attachments/assets/3f6768f6-5d96-4ca4-b5cc-a55ff40feb2c" />
 
 3.  **Создание "музыкального отпечатка":** Вместо предсказания жанра, мы используем модифицированную модель. Последний классифицирующий слой (Softmax) удаляется, а выходные данные предпоследнего слоя (вектор из 32 чисел) используются как уникальный "отпечаток" или **вектор признаков** трека. Этот вектор описывает ключевые характеристики музыки.
-   <img width="1027" height="896" alt="image" src="https://github.com/user-attachments/assets/d74ab180-587c-4295-b270-ea7c16864141" />
-
+   <img width="919" height="841" alt="image" src="https://github.com/user-attachments/assets/9c4edfdf-87b2-4812-93ee-2ecda8f0ba0e" />
 
 ### 2. Алгоритм рекомендаций
 
@@ -43,11 +46,11 @@
 3.  **Вычисление сходства:** С помощью **косинусного сходства (Cosine Similarity)** вычисляется близость вектора выбранного трека ко всем остальным векторам в базе данных.
 4.  **Вывод результата:** Треки сортируются по убыванию схожести, и топ-N композиций выводится пользователю в качестве рекомендаций.
 
-<img width="520" height="293" alt="image" src="https://github.com/user-attachments/assets/8e0a0180-e849-44d5-95e5-258144e11ccd" />
+<img width="518" height="285" alt="image" src="https://github.com/user-attachments/assets/64b3771a-1051-4b1e-896a-530b8f3e9953" />
 
-<img width="587" height="404" alt="image" src="https://github.com/user-attachments/assets/3f1e7d58-c340-4bf1-af60-af839e092e77" />
+<img width="558" height="400" alt="image" src="https://github.com/user-attachments/assets/466d6467-a586-47d8-aa2b-d3a24f59b9f1" />
 
-<img width="548" height="166" alt="image" src="https://github.com/user-attachments/assets/e776508c-8d53-4754-b743-d09482797f6b" />
+<img width="518" height="166" alt="image" src="https://github.com/user-attachments/assets/9a5d1d17-932c-4a35-8828-729443e68933" />
 
 ## 🛠️ Технологический стек
 
@@ -63,10 +66,11 @@
 ## 🖼️ Скриншоты приложения
 
 **Основное окно программы**
-<img width="1004" height="382" alt="image" src="https://github.com/user-attachments/assets/68274b4a-ed4f-43b5-b00b-20fed03e26b0" />
+<img width="1004" height="382" alt="image" src="https://github.com/user-attachments/assets/6e471bc4-c71d-4c2e-b47a-0319b7795e26" />
 
 **Список рекомендаций**
-<img width="1034" height="803" alt="image" src="https://github.com/user-attachments/assets/e7136c34-6687-4141-986d-a55324e9e2b4" />
+<img width="1034" height="803" alt="image" src="https://github.com/user-attachments/assets/30ec63a3-0a45-45a1-b521-d5b6503c2be2" />
 
 **Предсказание жанра загруженного трека**
-<img width="694" height="183" alt="image" src="https://github.com/user-attachments/assets/5b938196-57db-4cba-b798-ff298f5788bb" />
+<img width="694" height="183" alt="image" src="https://github.com/user-attachments/assets/618ace87-b349-4472-80b7-d70a271fe104" />
+
